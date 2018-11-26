@@ -73,7 +73,7 @@
 											echo '<td>' . $fila[1] . '</td>';
 											echo '<td ">' . $fila[4] . '</td>';
 											echo '<td ">' . $fila[5] . '</td>';
-											echo '<td class="text-center"> <a class="btn btn-primary btn-sm" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-stethoscope"></span></a> &nbsp; <a class="btn btn-info btn-sm" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-ambulance"> </span></a> &nbsp; <a class="btn btn-warning btn-sm danger" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-exclamation-triangle "></span></a> </td>';
+											echo '<td class="text-center"> <a class="btn btn-primary btn-sm" href=historiamedica.php?id='. $fila[0] .'><span class="fas fa-stethoscope"></span></a> &nbsp; <a class="btn btn-info btn-sm" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-ambulance"> </span></a> &nbsp; <a class="btn btn-warning btn-sm danger" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-exclamation-triangle "></span></a> </td>';
 											echo '<td class="text-center"> <a class="btn btn-danger btn-sm" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-trash-alt "></span></a> <a class="btn btn-success btn-sm" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-user-edit "></span></a></td>';
 
 										echo '</tr>';
