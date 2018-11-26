@@ -1,0 +1,53 @@
+html, body {
+  overflow-x: hidden;
+}
+
+/* Lists */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+#container {
+  position: relative;
+  padding: 20px 40px;
+  padding-top: 80px;
+}
+
+/* Menu Button */
+.menu-btn {
+  padding: 10px;
+  margin-bottom: 0px;
+  background: #FFF;
+  color: #2ef00f;
+  text-align: right;
+  cursor: pointer;
+  border: 0px;
+}
+.menu-btn:hover {
+  opacity: 0.6;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  background: #ffffff;
+  color: #FFFFFF;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 9998;
+}
+
+/* Footer */
+.site-footer {
+  position: relative;
+  border-top: 1px solid #EEE;
+  color: #999;
+  padding: 10px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/*# sourceMappingURL=demo.css.map */

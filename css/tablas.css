@@ -1,0 +1,25 @@
+.table .thead-green th {
+  color: #fff;
+  background-color: #039315;
+}
+
+.danger{
+    color: red;
+}
+ .navmargen{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+/** Medida larga */
+@media (min-width: 992px) {
+
+}
+/** Medida media **/
+@media (min-width: 768px) {
+
+}
+
+/** Medida Chica */
+@media (min-width: 576px) {
+
+}
