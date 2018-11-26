@@ -16,8 +16,6 @@
 			include "../php/conexion.php";
 			$selectTable = $conexion->query($SQL);
 		?>
-
-
 		<nav class="navbar fixed-top navbar-expand navbar-dark fondonav "> 
 
             <div class="collapse navbar-collapse" id="navbarsExample02">
@@ -71,8 +69,7 @@
 										</thead>
 									<?php
 									while ($fila = $selectTable->fetch_row()){					
-										echo '<tr>';
-											
+										echo '<tr>';											
 											echo '<td>' . $fila[1] . '</td>';
 											echo '<td ">' . $fila[4] . '</td>';
 											echo '<td ">' . $fila[5] . '</td>';
