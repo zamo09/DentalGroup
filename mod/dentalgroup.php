@@ -13,13 +13,13 @@
 	        	
 	        	<div class="row justify-content-md-center">
 					<div class="col-md-2 text-right">
-						<a class="" href=""><img width='100' height='100' src="../img/iconos/NuevoRegistro.png"></a>				
+						<a class="" href="tablapacientes.php"><img width='100' height='100' src="../img/iconos/NuevoRegistro.png"></a>				
 					</div>
 					<div class="col-md-2 text-center">
 	  					<a class="" href="newpaciente.php"><img width='100' height='100' src="../img/iconos/paciente.png"></a>	
 	  				</div>
 	  				<div class="col-md-2 text-left">
-	  					<a class="" href=""><img width='100' height='100' src="../img/iconos/tirantes.png"></a>	
+	  					<a class="" href="historiamedica.php"><img width='100' height='100' src="../img/iconos/tirantes.png"></a>	
 	  				</div>
 	        	</div><br>
 	        	<div class="row justify-content-md-center">

@@ -23,5 +23,27 @@ CREATE TABLE Pacientes(
 	ocupacion VARCHAR(255) NOT NULL COMMENT 'Ocupacion del paciente',
 	medicoreferido VARCHAR(255) NOT NULL COMMENT 'Medico que lo recomendo',
 	  activo BOOLEAN COMMENT 'Estado del Paciente',
-	PRIMARY KEY (id_usuario)
+	PRIMARY KEY (id_paciente)
 );
+
+CREATE TABLE HistoriaMedica(
+	id_historia INT NOT NULL AUTO_INCREMENT COMMENT 'Clave Primaria',
+	id_paciente INT NOT NULL COMMENT 'Llave foranea a paciente',
+	estado VARCHAR(2) NOT NULL COMMENT 'Estado de salud del paciente',
+	tratamiento VARCHAR(2) NOT NULL COMMENT 'Se encuntra bajo tratamiento medico',
+	coagulacion VARCHAR(2) NOT NULL COMMENT 'Padece problemas de coagulacion',
+	tomamedicamento VARCHAR(2) NOT NULL COMMENT 'Toma algun medicamento',
+	cualmeditoma VARCHAR(100) NOT NULL COMMENT 'Cual medicamento toma',
+	alergicomedi VARCHAR(2) NOT NULL COMMENT 'Alergico a algun medicamento',
+	cualalergico VARCHAR(100) NOT NULL COMMENT 'Cual medicamento es alergico',
+	transtorno VARCHAR(2) NOT NULL COMMENT 'Padece transtornos psicologico',
+	enfermedad VARCHAR(2) NOT NULL COMMENT 'Alguna enfermedad como Asma',
+	desmayo VARCHAR(2) NOT NULL COMMENT 'Se ha desmayado alguna vez',
+	anestesia VARCHAR(2) NOT NULL COMMENT 'Aplicacion de anestesia local',
+	experiencia VARCHAR(2) NOT NULL COMMENT 'Experiencia desagradables con medicos',
+	PRIMARY KEY (id_historia),
+	FOREIGN KEY (id_paciente) REFERENCES Pacientes (id_paciente)
+);
+
+/** Conulta que trae los nombres de los pacientes que les falta historia medica */
+SELECT P.nombre, P.id_paciente FROM Pacientes P, historiamedica H WHERE NOT P.id_paciente = H.id_paciente;

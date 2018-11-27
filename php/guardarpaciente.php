@@ -18,8 +18,7 @@ include("conexion.php");
 			$conexion->close();
 			echo "<script>
                			alert('Error al guardar el Paciente');
-               			
+               			window.history.back();
     				</script>";
-    				echo $sql_prodcuto;
 		}
 	?>

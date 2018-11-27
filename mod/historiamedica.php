@@ -42,17 +42,32 @@
 									<div class="card">
 					                <div class="card-body">
 					                    <h3 class="text-center default-text py-3"><i class="fas fa-notes-medical "></i> Historia Medica</h3>
-					                    <?php
-					                    	$id_paciente = $_GET['id'];
-											$SQL = "SELECT nombre FROM Pacientes WHERE id_paciente = " . $id_paciente . ";";
-											include "../php/conexion.php";
-											$selectTable = $conexion->query($SQL);
-											while ($fila = $selectTable->fetch_array()) {
-												echo "<h2 class='text-center default-text py-3'>" . $fila[0] . "</h2>";
-											}
-										?>
-					                    <!--Body-->
-					                    <form action="../php/guardarpaciente.php" method="post"> 
+					                    <form action="../php/guardarhistoria.php" method="post"> 
+					                    	<div class="row justify-content-md-center">
+					                    		<div class="md-form col-lg-6 col-md-12 col-sm-12">
+								                    <?php
+								                    	include "../php/conexion.php";					                    	
+								                    	if (empty($_GET['id'])) {
+								                    		$SQL = "SELECT nombre,id_paciente FROM Pacientes WHERE NOT id_paciente in (SELECT id_paciente FROM historiamedica);";
+															$selectPacientes = $conexion->query($SQL);
+															echo "<select name='paciente' class='form-control text-center'>";
+															while ($fila = $selectPacientes->fetch_array()) {
+																echo "<option value='".$fila[1]."'>" . $fila[0] . "</option>";
+															}
+															echo "</select>";
+								                    	}else{
+								                    		$id_paciente = $_GET['id'];
+															$SQL = "SELECT nombre FROM Pacientes WHERE id_paciente = " . $id_paciente . ";";
+															$selectTable = $conexion->query($SQL);
+															while ($fila = $selectTable->fetch_array()) {
+																echo "	<input type='hidden' name='paciente' value='".$id_paciente."'required>";
+																echo "<h2 class='text-center default-text py-3'>" . $fila[0] . "</h2>";
+															}
+														}
+														$conexion->close();
+													?>
+												</div>
+											</div>                   
 						                    <div class="row">
 						                        <div class="md-form col-lg-4 col-md-12 col-sm-12">
 						                            <i class="fas fa-briefcase-medical   prefix grey-text"></i>
@@ -61,65 +76,65 @@
 						                        </div> 
 						                        <div class="md-form col-lg-4 col-md-12 col-sm-12">
 						                            <i class="fas fa-file-medical-alt   prefix grey-text"></i>
-						                            <input type="text" name="edad" class="form-control" required>
+						                            <input type="text" autocomplete="off" name="tratamiento" class="form-control" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; Se encuentra bajo tratamiento medico?</label>
 						                        </div>
 						                        <div class="md-form col-lg-4 col-md-12 col-sm-12">
 						                            <i class="fas fa-tint prefix grey-text"></i>
-						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                           	<input type="text" autocomplete="off" name="coagulacion" class="form-control" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; Padece problemas con la coagulación? </label>
 						                        </div> 						                        					                    	
 						                    </div>
 						                    <div class="row">
 						                        <div class="md-form col-lg-3 col-md-12 col-sm-12">
 						                            <i class="fas fa-tablets prefix grey-text"></i>
-						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                           	<input type="text" autocomplete="off" name="toma" class="form-control" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; Toma algun medicamento? </label>
 						                        </div> 
 						                        <div class="md-form col-lg-3 col-md-12 col-sm-12">
 						                            <i class="fas fa-question prefix grey-text"></i>
-						                            <input type="text" name="edad" class="form-control" value="Ninguno" required>
+						                            <input type="text" autocomplete="off" name="cualtoma" class="form-control" value="Ninguno" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; cual?</label>
 						                        </div> 
 						                         <div class="md-form col-lg-4 col-md-12 col-sm-12">
 						                            <i class="fas fa-skull-crossbones prefix grey-text"></i>
-						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                           	<input type="text" autocomplete="off" name="alergico" class="form-control" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; Es alergico a algun medicamento? </label>
 						                        </div> 
 						                        <div class="md-form col-lg-2 col-md-12 col-sm-12">
 						                            <i class="fas fa-question prefix grey-text"></i>
-						                            <input type="text" name="edad" class="form-control" value="Ninguno" required>
+						                            <input type="text" autocomplete="off" name="cualalergico" class="form-control" value="Ninguno" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; cual?</label>
 						                        </div>						                        					                    	
 						                    </div>
 						                     <div class="row">
 						                        <div class="md-form col-lg-6 col-md-12 col-sm-12">
 						                            <i class="fas fa-brain prefix grey-text"></i>
-						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                           	<input type="text" autocomplete="off" name="transtorno" class="form-control" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; Padece o padecio algun transtorno psicologico o nerviso? </label>
 						                        </div> 
 						                        <div class="md-form col-lg-6 col-md-12 col-sm-12">
 						                            <i class="fas fa-asterisk prefix grey-text"></i>
-						                            <input type="text" name="edad" class="form-control" required>
+						                            <input type="text" autocomplete="off" name="enfermedad" class="form-control" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; Padece alguna enfermedad como Asma, precion alta etc.?</label>
 						                        </div> 						                        					                    	
 						                    </div>
 						                    <div class="row">
 						                        <div class="md-form col-lg-3 col-md-12 col-sm-12">
 						                            <i class="fas fa-dizzy prefix grey-text"></i>
-						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                           	<input type="text" autocomplete="off" name="desmayo" class="form-control" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; Se ha desmayado alguna vez? </label>
 						                        </div> 
 						                        <div class="md-form col-lg-5 col-md-12 col-sm-12">
 						                            <i class="fas fa-syringe prefix grey-text"></i>
-						                            <input type="text" name="edad" class="form-control" required>
+						                            <input type="text" autocomplete="off" name="anestecia" class="form-control" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; Le han aplicado anestecia local anteriormente?</label>
 						                        </div>						                        					                    	
 						                    </div>
 						                     <div class="row">
 						                         <div class="md-form col-lg-6 col-md-12 col-sm-12">
 						                            <i class="fas fa-angry prefix grey-text"></i>
-						                            <input type="text" name="edad" class="form-control" required>
+						                            <input type="text" name="experiencia" class="form-control" required>
 						                            <label for="defaultForm-pass">&nbsp;&nbsp; Ha tenido experiencias negativas con algun dentista?</label>
 						                        </div>  						                        					                    	
 						                    </div>
