@@ -1,6 +1,7 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
 
+/* Codigo puesto por mi */
 .fondonav{
       background-color: #039315 !important;
 }
@@ -8,6 +9,11 @@
 .fondonav2{
       background-color: #C9F091 !important;
 }
+
+.margenizquierdo{
+    margin-left: 3em;
+}
+/* fin del texto  */
 
 .margentitulos{
     margin-left: 10px;

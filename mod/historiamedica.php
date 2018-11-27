@@ -42,25 +42,87 @@
 									<div class="card">
 					                <div class="card-body">
 					                    <h3 class="text-center default-text py-3"><i class="fas fa-notes-medical "></i> Historia Medica</h3>
+					                    <?php
+					                    	$id_paciente = $_GET['id'];
+											$SQL = "SELECT nombre FROM Pacientes WHERE id_paciente = " . $id_paciente . ";";
+											include "../php/conexion.php";
+											$selectTable = $conexion->query($SQL);
+											while ($fila = $selectTable->fetch_array()) {
+												echo "<h2 class='text-center default-text py-3'>" . $fila[0] . "</h2>";
+											}
+										?>
 					                    <!--Body-->
 					                    <form action="../php/guardarpaciente.php" method="post"> 
 						                    <div class="row">
-						                        <div class="md-form col-lg-8 col-md-12 col-sm-12">
-						                            <i class="fas fa-id-card  prefix grey-text"></i>
-						                            <input type="text" name="nombre" class="form-control" required>
-						                            <select class="form-control">
-						                            	<option>Si</option>
-						                            	<option>No</option>
-						                            </select>
-						                            <label for="defaultForm-email">&nbsp;&nbsp; Nombre del paciente</label>
+						                        <div class="md-form col-lg-4 col-md-12 col-sm-12">
+						                            <i class="fas fa-briefcase-medical   prefix grey-text"></i>
+						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Se encuentra en buen estado de salud? </label>
 						                        </div> 
 						                        <div class="md-form col-lg-4 col-md-12 col-sm-12">
-						                            <i class="fas fa-birthday-cake  prefix grey-text"></i>
+						                            <i class="fas fa-file-medical-alt   prefix grey-text"></i>
 						                            <input type="text" name="edad" class="form-control" required>
-						                            <label for="defaultForm-pass">&nbsp;&nbsp; Edad</label>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Se encuentra bajo tratamiento medico?</label>
+						                        </div>
+						                        <div class="md-form col-lg-4 col-md-12 col-sm-12">
+						                            <i class="fas fa-tint prefix grey-text"></i>
+						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Padece problemas con la coagulación? </label>
+						                        </div> 						                        					                    	
+						                    </div>
+						                    <div class="row">
+						                        <div class="md-form col-lg-3 col-md-12 col-sm-12">
+						                            <i class="fas fa-tablets prefix grey-text"></i>
+						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Toma algun medicamento? </label>
+						                        </div> 
+						                        <div class="md-form col-lg-3 col-md-12 col-sm-12">
+						                            <i class="fas fa-question prefix grey-text"></i>
+						                            <input type="text" name="edad" class="form-control" value="Ninguno" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; cual?</label>
+						                        </div> 
+						                         <div class="md-form col-lg-4 col-md-12 col-sm-12">
+						                            <i class="fas fa-skull-crossbones prefix grey-text"></i>
+						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Es alergico a algun medicamento? </label>
+						                        </div> 
+						                        <div class="md-form col-lg-2 col-md-12 col-sm-12">
+						                            <i class="fas fa-question prefix grey-text"></i>
+						                            <input type="text" name="edad" class="form-control" value="Ninguno" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; cual?</label>
 						                        </div>						                        					                    	
-						                    </div>  						                                      	
-						                    </div> 
+						                    </div>
+						                     <div class="row">
+						                        <div class="md-form col-lg-6 col-md-12 col-sm-12">
+						                            <i class="fas fa-brain prefix grey-text"></i>
+						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Padece o padecio algun transtorno psicologico o nerviso? </label>
+						                        </div> 
+						                        <div class="md-form col-lg-6 col-md-12 col-sm-12">
+						                            <i class="fas fa-asterisk prefix grey-text"></i>
+						                            <input type="text" name="edad" class="form-control" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Padece alguna enfermedad como Asma, precion alta etc.?</label>
+						                        </div> 						                        					                    	
+						                    </div>
+						                    <div class="row">
+						                        <div class="md-form col-lg-3 col-md-12 col-sm-12">
+						                            <i class="fas fa-dizzy prefix grey-text"></i>
+						                           	<input type="text" autocomplete="off" name="salud" class="form-control" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Se ha desmayado alguna vez? </label>
+						                        </div> 
+						                        <div class="md-form col-lg-5 col-md-12 col-sm-12">
+						                            <i class="fas fa-syringe prefix grey-text"></i>
+						                            <input type="text" name="edad" class="form-control" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Le han aplicado anestecia local anteriormente?</label>
+						                        </div>						                        					                    	
+						                    </div>
+						                     <div class="row">
+						                         <div class="md-form col-lg-6 col-md-12 col-sm-12">
+						                            <i class="fas fa-angry prefix grey-text"></i>
+						                            <input type="text" name="edad" class="form-control" required>
+						                            <label for="defaultForm-pass">&nbsp;&nbsp; Ha tenido experiencias negativas con algun dentista?</label>
+						                        </div>  						                        					                    	
+						                    </div>
 						                    <div class="row justify-content-md-center">
 						                    	<div class="col-lg-4 col-md-12 col-sm-12 text-right">
 						                    		<button type="" class="btn btn-danger btn-lg btn-block"><i class="fas fa-times-circle "></i> Cancelar</button>
@@ -86,6 +148,7 @@
 		<script src="../js/mdb.min.js"></script>
         <script>
 
+
           $(function(){
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
@@ -101,6 +164,7 @@
             });
           }); 
 	
+
         </script>
 </body>
 </html>

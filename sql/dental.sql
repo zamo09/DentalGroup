@@ -14,7 +14,7 @@ CREATE TABLE Usuarios(
 Insert into Usuarios (nombre,usuario,contrasena,activo,tipo) values ('Samuel','zamo','123',1,'admin');
 
 CREATE TABLE Pacientes(
-	id_usuario INT NOT NULL AUTO_INCREMENT COMMENT 'Clave Primaria',
+	id_paciente INT NOT NULL AUTO_INCREMENT COMMENT 'Clave Primaria',
 	nombre VARCHAR(255) NOT NULL COMMENT 'Nombre del Paciente',
 	edad INTEGER NOT NULL COMMENT 'Edad del paciente',
 	domicilio VARCHAR(255) NOT NULL COMMENT 'Domicilio del paciente',
