@@ -13,7 +13,7 @@ $desmayo = $_POST['desmayo'];
 $anestecia = $_POST['anestecia'];
 $experiencia = $_POST['experiencia'];
 include("conexion.php");
-	$sql_historia = "INSERT INTO historiamedica(id_paciente,estado,tratamiento,coagulacion,tomamedicamento,cualmeditoma,alergicomedi,cualalergico,transtorno,enfermedad,desmayo,anestesia,experiencia) VALUES (" . $id_paciente . ",'".$salud."','".$tratamiento."','".$coagulacion."','".$toma."','".$cualtoma."','".$alergico."','".$cualalergico."','".$transtorno."','".$enfermedad."','".$desmayo."','".$anestecia."','".$experiencia."');";
+	$sql_historia = "INSERT INTO HistoriaMedica(id_paciente,estado,tratamiento,coagulacion,tomamedicamento,cualmeditoma,alergicomedi,cualalergico,transtorno,enfermedad,desmayo,anestesia,experiencia) VALUES (" . $id_paciente . ",'".$salud."','".$tratamiento."','".$coagulacion."','".$toma."','".$cualtoma."','".$alergico."','".$cualalergico."','".$transtorno."','".$enfermedad."','".$desmayo."','".$anestecia."','".$experiencia."');";
 	if ($resultado = $conexion->query($sql_historia)) {
 		$conexion->close();
 		echo "<script>

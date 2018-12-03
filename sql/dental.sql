@@ -19,10 +19,10 @@ CREATE TABLE Pacientes(
 	edad INTEGER NOT NULL COMMENT 'Edad del paciente',
 	domicilio VARCHAR(255) NOT NULL COMMENT 'Domicilio del paciente',
 	correo VARCHAR(255) NOT NULL COMMENT 'Correo del paciente',
-	telefono INTEGER NOT NULL COMMENT 'Telefono del paciente',
+	telefono VARCHAR NOT NULL COMMENT 'Telefono del paciente',
 	ocupacion VARCHAR(255) NOT NULL COMMENT 'Ocupacion del paciente',
 	medicoreferido VARCHAR(255) NOT NULL COMMENT 'Medico que lo recomendo',
-	  activo BOOLEAN COMMENT 'Estado del Paciente',
+	activo BOOLEAN COMMENT 'Estado del Paciente',
 	PRIMARY KEY (id_paciente)
 );
 
