@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Lista de pacientes</title>
+    <link rel="shortcut icon" href="../img/iconos/icon.ico">
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/tablas.css">
@@ -73,9 +74,8 @@
 											echo '<td>' . $fila[1] . '</td>';
 											echo '<td ">' . $fila[4] . '</td>';
 											echo '<td ">' . $fila[5] . '</td>';
-											echo '<td class="text-center"> <a class="btn btn-primary btn-sm" href=historiamedica.php?id='. $fila[0] .'><span class="fas fa-stethoscope"></span></a> &nbsp; <a class="btn btn-info btn-sm" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-ambulance"> </span></a> &nbsp; <a class="btn btn-warning btn-sm danger" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-exclamation-triangle "></span></a> </td>';
-											echo '<td class="text-center"> <a class="btn btn-danger btn-sm" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-trash-alt "></span></a> <a class="btn btn-success btn-sm" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-user-edit "></span></a></td>';
-
+											echo '<td class="text-center"> <a class="btn btn-primary btn-sm" href=historiamedica.php?id='. $fila[0] .'><span class="fas fa-stethoscope"></span></a> &nbsp; <a class="btn btn-info btn-sm" href=historiaestomatologica.php?id='. $fila[0] .'><span class="fas fa-ambulance"> </span></a> &nbsp; <a class="btn btn-warning btn-sm danger" href=historiadolor.php?id='. $fila[0] .'><span class="fas fa-exclamation-triangle "></span></a> </td>';
+											echo '<td class="text-center"> <a class="btn btn-danger btn-sm" href=../php/eliminar_paciente.php?id='. $fila[0] .' onclick="return confirmar(\''. $fila[1] .'\');"><span class="fas fa-trash-alt "></span></a> <a class="btn btn-success btn-sm" href=php/eliminar_producto.php?id='. $fila[0] .'><span class="fas fa-user-edit "></span></a></td>';
 										echo '</tr>';
 									}
 									$selectTable->close();
@@ -137,6 +137,14 @@ function myFunction() {
       tr[i].style.display = "none";
     }
   }
+}
+
+function confirmar(paciente)
+{
+  if(confirm("Desea Eliminar el paciente: " + paciente + "?"))
+    return true;
+  else
+    return false;
 }
  
 </script>

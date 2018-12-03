@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Dental Group</title>
+	<link rel="shortcut icon" href="../img/iconos/icon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/dental.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 </head>

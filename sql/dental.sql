@@ -47,3 +47,35 @@ CREATE TABLE HistoriaMedica(
 
 /** Conulta que trae los nombres de los pacientes que les falta historia medica */
 SELECT P.nombre, P.id_paciente FROM Pacientes P, historiamedica H WHERE NOT P.id_paciente = H.id_paciente;
+
+CREATE TABLE HistoriaEstomatologica(
+	id_estomatologica INT NOT NULL AUTO_INCREMENT COMMENT 'Clave Primaria',
+	id_paciente INT NOT NULL COMMENT 'Llave foranea a paciente',
+	accidente VARCHAR(2) NOT NULL COMMENT 'Ha tenido algun accidente',	
+	queaccidente VARCHAR(100) NOT NULL COMMENT 'Cual accidente',	
+	encias VARCHAR(2) NOT NULL COMMENT 'Le sangran las encias',	
+	dientes VARCHAR(2) NOT NULL COMMENT 'se cepilla los dientes',	
+	cuantasveces VARCHAR(2) NOT NULL COMMENT 'cuantas veces al dia',	
+	queutiliza VARCHAR(100) NOT NULL COMMENT 'que utiliza',	
+	ultimavisita VARCHAR(100) NOT NULL COMMENT 'su ultima visita al dentista',	
+	PRIMARY KEY (id_estomatologica),
+	FOREIGN KEY (id_paciente) REFERENCES Pacientes (id_paciente)
+);
+
+CREATE TABLE HistoriaDolor(
+	id_dolor INT NOT NULL AUTO_INCREMENT COMMENT 'Clave Primaria',
+	id_paciente INT NOT NULL COMMENT 'Llave foranea a paciente',
+	localizacion VARCHAR(100) NOT NULL COMMENT 'Localizacion del dolor',
+	inicio VARCHAR(100) NOT NULL COMMENT 'Donde inicio el dolor',
+	intensidad VARCHAR(100) NOT NULL COMMENT 'Intensidad del dolor',
+	estimulo VARCHAR(100) NOT NULL COMMENT 'Que lo proboca',
+	cual VARCHAR(100) NOT NULL COMMENT 'cual estimulo',
+	percusion VARCHAR(100) NOT NULL COMMENT 'Se puede tocar',
+	fisura VARCHAR(100) NOT NULL COMMENT 'Presenta fisura',
+	rx VARCHAR(100) NOT NULL COMMENT 'Rayos X',
+	diagnostico VARCHAR(100) NOT NULL COMMENT 'Diagnostico para el dolor',
+	plan VARCHAR(100) NOT NULL COMMENT 'Que se puede hacer',
+	pronostico VARCHAR(100) NOT NULL COMMENT 'si es bueno o malo',
+	PRIMARY KEY (id_dolor),
+	FOREIGN KEY (id_paciente) REFERENCES Pacientes (id_paciente)
+);
