@@ -79,3 +79,43 @@ CREATE TABLE HistoriaDolor(
 	PRIMARY KEY (id_dolor),
 	FOREIGN KEY (id_paciente) REFERENCES Pacientes (id_paciente)
 );
+
+CREATE TABLE ListaMateriales(
+	id_lista INT NOT NULL AUTO_INCREMENT COMMENT 'Clave primaria',
+	id_usuario INT NOT NULL COMMENT 'Que usuario creo la lista',
+	fecha DATE NOT NULL COMMENT 'Fecha en la que se creo la lista',
+	activo BOOLEAN COMMENT 'Si esta activa o no la lista',
+	PRIMARY KEY (id_lista),
+	FOREIGN KEY (id_usuario) REFERENCES Usuarios (id_usuario)
+);
+
+CREATE TABLE Tratamiento(
+	id_tratamiento INT NOT NULL AUTO_INCREMENT COMMENT 'Clave Primaria',
+	nombre VARCHAR(100) NOT NULL COMMENT 'Nombre que se le da al tratamiento',
+	precio DECIMAL(6,2) NOT NULL COMMENT 'Precio del tratamiento',
+	activo BOOLEAN COMMENT 'Estado del tratamiento',
+	id_lista INT NOT NULL COMMENT 'Llave foranea a la lista de materiales',
+	PRIMARY KEY (id_tratamiento),
+	FOREIGN KEY (id_lista) REFERENCES ListaMateriales (id_lista)
+);
+
+CREATE TABLE Productos(
+	id_producto INT NOT NULL AUTO_INCREMENT COMMENT 'Clave Primaria',
+	nombre VARCHAR(100) NOT NULL COMMENT 'Nombre del producto',
+	cantidadmin INT NOT NULL COMMENT 'Cantidad minima perimitida para el producto'.
+	cantidad INT NOT NULL COMMENT 'Cantidad real en el almacen',
+	activo BOOLEAN NOT NULL COMMENT 'Estado del producto',
+	id_usuario INT NOT NULL COMMENT 'Que usuario creo la lista',
+	PRIMARY KEY (id_producto),
+	FOREIGN KEY (id_usuario) REFERENCES Usuarios (id_usuario)
+);
+
+CREATE TABLE Materiales(
+	id_materiales INT NOT NULL AUTO_INCREMENT COMMENT 'Llave Primaria',
+	id_lista INT NOT NULL COMMENT 'Referencia a la lista de materiales',
+	id_producto INT NOT NULL COMMENT 'Referencia al producto utilizado',
+	cantidad INT NOT NULL COMMENT 'Cantidad utilizada en la lista',
+	PRIMARY KEY (id_materiales),
+	FOREIGN KEY (id_lista) REFERENCES ListaMateriales (id_lista),
+	FOREIGN KEY (id_producto) REFERENCES Productos (id_producto)
+);
