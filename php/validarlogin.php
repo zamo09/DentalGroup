@@ -14,6 +14,7 @@ valida();
 							session_start();
 							$_SESSION['nom_Usuario']  = $f['nombre'];
 							$_SESSION['User']  = $user;
+							$_SESSION['id_user'] = $f['id_usuario'];
 							$_SESSION['tipo_user']  = $f['tipo'];
 							$conexion->close();
 							header ("Location: ../mod/dentalgroup.php");							
