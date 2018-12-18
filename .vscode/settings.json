@@ -1,2 +1,19 @@
 {
-}
+    "editor.minimap.enabled": false,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "Gotham",
+    "workbench.iconTheme": "file-icons",
+    "editor.fontSize": 13,
+    "editor.fontFamily": "DejaVu Sans Condensed",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontFamily": "Source Code Pro",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#ffffff",
+        "activityBar.foreground": "#000000",
+        "titleBar.activeBackground": "#ffffff",
+        "titleBar.activeForeground": "#000000"
+      }
+    }

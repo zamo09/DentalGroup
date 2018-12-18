@@ -11,7 +11,7 @@
 	<div class="container">
 	    <div class="row h-100">
 	        <div class="col-sm-12 my-auto">
-	        	
+	        	<h1></h1>
 	        	<div class="row justify-content-md-center">
 					<div class="col-md-2 text-right">
 						<a class="" href="tablapacientes.php"><img width='100' height='100' src="../img/iconos/NuevoRegistro.png"></a>				
