@@ -6,18 +6,18 @@
     "configurations": [
         
         {
-            "name": "Launch index.html",
+            "name": "Launch index.php",
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "file": "${workspaceFolder}/index.html"
+            "file": "../index.php"
         },
         {
             "name": "Launch localhost",
-            "type": "firefox",
+            "type": "node",
             "request": "launch",
             "reAttach": true,
-            "url": "http://localhost/index.html",
+            "url": "http://localhost/DentalGroup/index.php",
             "webRoot": "${workspaceFolder}"
         },
         {

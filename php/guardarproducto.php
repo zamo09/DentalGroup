@@ -16,6 +16,6 @@ $sql_producto = "INSERT INTO Productos (nombre,cantidadmin,cantidad,activo,id_us
 			echo "<script>
                			alert('Error al guardar el producto');               			
     				</script>";
-    				echo $sql_producto;
+					echo $sql_producto; 					
 		}
 ?>
