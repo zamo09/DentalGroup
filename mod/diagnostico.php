@@ -10,7 +10,7 @@
 </head>
 <body>
 	<?php include "../mod/menu.php" ?>
-	<div class="container "  style="margin-top: 2em;">
+	<div class="container" >
 	    <div class="row h-100">
 	        <div class="col-sm-12 my-auto">
 	        	<h1></h1>
@@ -22,17 +22,31 @@
 				</div>
 	        	<div class="row justify-content-md-center">
 					<div class="col-md-1 my-auto">
+						<button id="btn-abrir-popup" class="btn btn-primary">MS1</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="btn-abrir-popup2" class="btn btn-primary">MS2</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="btn-abrir-popup" class="btn btn-primary">MS3</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="btn-abrir-popup" class="btn btn-primary">MS4</button>
+					</div>
+					<div class="col-md-1 my-auto">
 						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="btn-abrir-popup2" class="btn btn-primary">MRB</button>
-					</div>
-					<div class="col-md-1 my-auto">
 						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
 						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
 					</div>
+					<div class="col-md-1 my-auto">
+						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
+					</div>
+	        	</div><br>
+	        	<div class="row justify-content-md-center">
 					<div class="col-md-1 my-auto">
 						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
 					</div>
@@ -59,7 +73,13 @@
 					</div>
 	        	</div><br>
 	        	<div class="row justify-content-md-center">
-				<div class="col-md-1 my-auto">
+					<div class="col-md-1 my-auto">
+						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
 						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
@@ -71,6 +91,14 @@
 					<div class="col-md-1 my-auto">
 						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
 					</div>
+					<div class="col-md-1 my-auto">
+						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
+					</div>
+	        	</div><br>
+	        	<div class="row justify-content-md-center">
 					<div class="col-md-1 my-auto">
 						<button id="btn-abrir-popup" class="btn btn-primary">MRB</button>
 					</div>
@@ -144,24 +172,22 @@
 		</div>
 	<!-- Ventana emergente -->
 	<div class="overlay" id="overlay">
-			<div class="popup" id="popup">
-				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-				<h3>SUSCRIBETE</h3>
-				<h4>y recibe un cupon de descuento.</h4>
-				<form action="">
-					<div class="contenedor-inputs">
-						<input type="text" placeholder="Nombre">
-						<input type="email" placeholder="Correo">
-					</div>
-					<input type="submit" class="btn-submit" value="Suscribirse">
-				</form>
-			</div>
-</div>
+		<div class="popup" id="popup">
+			<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+			<h3>Diagnostico de MS1</h3>
+			<h4>Registre su diagnostico sobre el diente:</h4>
+			<form action="../php/guardardiagnostico.php">
+				<textarea type="text" id="form10" class="md-textarea form-control" rows="4"></textarea>
+				<br>
+				<input type="submit" class="btn-submit" value="Suscribirse">
+			</form>
+		</div>
+	</div>
 
 <div class="overlay" id="overlay2">
 			<div class="popup" id="popup2">
 				<a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-				<h3>>aMO</h3>
+				<h3>zaMO</h3>
 				<h4>y recibe un cupon de descuento.</h4>
 				<form action="">
 					<div class="contenedor-inputs">

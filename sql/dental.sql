@@ -119,3 +119,10 @@ CREATE TABLE Materiales(
 	FOREIGN KEY (id_lista) REFERENCES ListaMateriales (id_lista),
 	FOREIGN KEY (id_producto) REFERENCES Productos (id_producto)
 );
+
+CREATE TABLE Diagnostico(
+	id_diagnostico INT NOT NULL AUTO_INCREMENT COMMENT 'Llave Primaria',
+	id_paciente INT NOT NULL COMMENT 'Llave foranea a paciente',
+	clave VARCHAR(5) NOT NULL COMMENT 'Clave del nombre del diente',
+	descripcion VARCHAR(500) NOT NULL COMMENT 'Descripcion del tratamiento',
+);

@@ -122,7 +122,7 @@ function myFunction() {
   tr = table.getElementsByTagName("tr");
 
   // recorrer las filas que buscara apartir de la fila i
-  for (i = 1; i < tr.length; i++) {
+  for (i = 0; i < tr.length; i++) {
     visible = false;
     /* Obtenemos todas las celdas de la fila, no sólo la primera */
     td = tr[i].getElementsByTagName("td");

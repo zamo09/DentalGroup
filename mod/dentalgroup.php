@@ -31,7 +31,7 @@
 	  					<a class="" href=""><img width='100' height='100' src="../img/iconos/goma.png"></a>	
 	  				</div>
 	  				<div class="col-md-2 text-left">
-	  					<a class="" href="./diagnostico.php"><img width='100' height='100' src="../img/iconos/diente.png"></a>	
+	  					<a class="" href="selectpaciente.php?frm=diagnostico"><img width='100' height='100' src="../img/iconos/diente.png"></a>	
 	  				</div>
 	        	</div>
 	        </div>
