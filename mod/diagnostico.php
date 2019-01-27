@@ -16,7 +16,7 @@
 		$SQL = "SELECT nombre FROM Pacientes WHERE id_paciente = " . $id_paciente . ";";
 		$selectTable = $conexion->query($SQL);												
 	 ?>
-	<div class="container" >
+	<div class="container-fluid" >
 	    <div class="row h-100">
 	        <div class="col-sm-12 my-auto">
 	        	<h1></h1>
