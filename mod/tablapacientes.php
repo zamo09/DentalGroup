@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<?php 
-			$SQL = "SELECT * FROM Pacientes WHERE activo = 1;";
+			$SQL = "SELECT * FROM Pacientes WHERE activo = 1 ORDER BY nombre;";
 			include "../php/conexion.php";
 			$selectTable = $conexion->query($SQL);
 		?>

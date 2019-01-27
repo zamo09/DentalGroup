@@ -32,106 +32,106 @@
 				</div>
 	        	<div class="row justify-content-md-center">
 					<div class="col-md-1 my-auto">
-						<button id="MS1" class="btn btn-primary">MS1</button>
+						<button id="MS1" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MS1</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS2" class="btn btn-primary">MS2</button>
+						<button id="MS2" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MS2</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS3" class="btn btn-primary">MS3</button>
+						<button id="MS3" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MS3</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MS4</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MS4</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
-					</div>
-	        	</div><br>
-	        	<div class="row justify-content-md-center">
-					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
-					</div>
-					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
-					</div>
-					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
-					</div>
-					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
-					</div>
-					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
-					</div>
-					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
-					</div>
-					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
-					</div>
-					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 	        	</div><br>
 	        	<div class="row justify-content-md-center">
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 	        	</div><br>
 	        	<div class="row justify-content-md-center">
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 					<div class="col-md-1 my-auto">
-						<button id="MS" class="btn btn-primary">MRB</button>
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
+					</div>
+	        	</div><br>
+	        	<div class="row justify-content-md-center">
+					<div class="col-md-1 my-auto">
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
+					</div>
+					<div class="col-md-1 my-auto">
+						<button id="MS" class="btn btn-primary"><span class="fas fa-tooth"></span></a> MRB</button>
 					</div>
 	        	</div>
 	        </div>
@@ -174,7 +174,7 @@
 												echo '<tr>';						
 													echo '<td ">' . $fila[2] . '</td>';
 													echo '<td ">' . $fila[3] . '</td>';
-													echo '<td class="text-center"> <a class="btn btn-primary btn-sm" href=historiamedica.php?id='. $fila[0] .'><span class="fas fa-stethoscope"></span></a> </td>';
+													echo '<td class="text-center"> <a class="btn btn-danger btn-sm" href=../php/eliminar_diagnostico.php?id='. $fila[0] .'&paciente='.$id_paciente.'><span class="fas fa-trash-alt"></span></a> </td>';
 												echo '</tr>';
 											}
 											$selectTable->close();
