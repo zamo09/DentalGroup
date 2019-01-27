@@ -174,7 +174,7 @@
 												echo '<tr>';						
 													echo '<td ">' . $fila[2] . '</td>';
 													echo '<td ">' . $fila[3] . '</td>';
-													echo '<td class="text-center"> <a class="btn btn-danger btn-sm" href=../php/eliminar_diagnostico.php?id='. $fila[0] .'&paciente='.$id_paciente.'><span class="fas fa-trash-alt"></span></a> </td>';
+													echo '<td class="text-center"> <a class="btn btn-danger btn-sm" href=../php/eliminar_diagnostico.php?id='. $fila[0] .'&paciente='.$id_paciente.'&diente='.$fila[2].'><span class="fas fa-trash-alt"></span></a> </td>';
 												echo '</tr>';
 											}
 											$selectTable->close();
