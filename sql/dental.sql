@@ -128,3 +128,17 @@ CREATE TABLE Diagnostico(
 );
 
 SELECT P.nombre, D.clave, D.descripcion FROM Pacientes P, Diagnostico D WHERE P.id_paciente = D.id_paciente;
+
+CREATE TABLE Agenda(
+	id_agenda INT NOT NULL AUTO_INCREMENT COMMENT 'Llave Primaria',
+	id_paciente INT NOT NULL COMMENT 'Llave foranea a paciente',
+	title VARCHAR(200) NOT NULL COMMENT 'Descripcion de la cita',
+	descripcion VARCHAR(500) NOT NULL COMMENT 'Descripcion de la cita',
+	start DATETIME NOT NULL COMMENT 'Fecha en la que se cito',
+	end DATETIME NOT NULL COMMENT 'Fecha en la que se cito',
+	color VARCHAR(30) NOT NULL COMMENT 'Color de la cita',
+	textColor VARCHAR(30) NOT NULL COMMENT 'Color del texto',
+	PRIMARY KEY (id_agenda)
+);
+
+INSERT INTO Agenda(id_paciente,title,descripcion,start,end,color,textColor) VALUES (1,"Cita de Prueba","Preba para sacar datos de citas de MySQL","2019-02-05 02:44:00","2019-02-05 02:44:00","#FFFFFF","#FF0F0");
