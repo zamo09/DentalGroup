@@ -126,3 +126,5 @@ CREATE TABLE Diagnostico(
 	clave VARCHAR(5) NOT NULL COMMENT 'Clave del nombre del diente',
 	descripcion VARCHAR(500) NOT NULL COMMENT 'Descripcion del tratamiento',
 );
+
+SELECT P.nombre, D.clave, D.descripcion FROM Pacientes P, Diagnostico D WHERE P.id_paciente = D.id_paciente;
