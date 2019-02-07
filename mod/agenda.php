@@ -128,6 +128,42 @@
 				});
 				$("#id_agenda").val(calEvent.id_agenda);
 				seleccionarPaciente(calEvent.id_paciente);
+			},
+			editable:true,
+			eventDrop:function(calEvent){
+				swal({
+				  title: "Modificar la cita?",
+				  text: "Estas a punto de Modificar una cita esto es verdad?",
+				  icon: "warning",
+				  buttons: true,
+				  dangerMode: true,
+				})
+				.then((willDelete) => {
+				  if (willDelete) {
+					$('#tituloEvento').html(calEvent.title);
+					$("#txtTitulo").val(calEvent.title);
+					$("#txtDescripcion").val(calEvent.descripcion);
+					$("#txtColor").val(calEvent.color);
+					var FechaHora = calEvent.start.format().split("T");
+					$("#txtFecha").val(FechaHora[0]);
+					$("#txtHora").val(FechaHora[1]);
+					$('#EventoModal').on('shown.bs.modal', function () {
+					  $('.chosen-select', this).chosen('destroy').chosen();				  
+					});
+					$("#id_agenda").val(calEvent.id_agenda);
+					seleccionarPaciente(calEvent.id_paciente);
+				    RecolectarDatosGUI();
+					EnviarInformacion('modificar',NuevoEvento,"¡Cita Modificada!","Vuelve a planear tus tiempos la cita ya cambio",true);
+				  } else {
+				    swal({
+						icon: "info",
+						title: "Todo Tranquilo",
+						text: "No te preoucupes no Modificamos la cita",
+						button: "Entiendo",
+						timer: 3000,
+					});
+				  }
+				});
 			}
 		});
 	});
@@ -211,7 +247,7 @@
 		};
 	};
 
-	function EnviarInformacion(accion,objEvento,titulo,mensaje){
+	function EnviarInformacion(accion,objEvento,titulo,mensaje,modal){
 		$.ajax({
 			type: 'POST',
 			url: '../php/citas.php?accion='+accion,
@@ -219,7 +255,9 @@
 			success: function(msg){
 				if(msg){
 					$('#CalendarioWeb').fullCalendar('refetchEvents');
-					$('#EventoModal').modal('toggle');
+					if (!modal){
+						$('#EventoModal').modal('toggle');
+					}
 					swal({
 						icon: "success",
 						title: titulo,
