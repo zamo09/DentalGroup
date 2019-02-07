@@ -9,11 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/dental.css">
 	<link rel="stylesheet" type="text/css" href="../css/popup.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-clockpicker.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<script src='../js/jquery.min-calendar.js'></script>
 	<script src='../js/moment.min.js'></script>
 	<script src='../js/fullcalendar.js'></script>
 	<script src="../js/es.js"></script>
+	<script src="../js/bootstrap-clockpicker.js"></script>
 	<link rel="stylesheet" href="../css/bootstrap-chosen.css" />
 </head>
 <body>
@@ -47,25 +49,42 @@
 			    	</button>
 			    </div>
 			    <div class="modal-body">
-			    	<input type="hidden" name="agenda" id="id_agenda" >
-					<label>Selecciona un paciente</label>
-					<?php $selectPacientes = $conexion->query($SQL);?>
-					<select name="paciente" id="pacientesS" data-placeholder="Seleciona un paciente..." class="chosen-select" required>
-						<option value=""></option>
-						<?php while ($fila = $selectPacientes->fetch_array()) {
-						echo "<option value='".$fila[1]."'>" . $fila[0] . "</option>";
-						} ?>
-					</select><br><br>
-					<label>Fecha</label>
-					<input type="text" name="fecha" id="txtFecha"><br>
-					<label>Titulo</label>
-					<input type="text" name="titulo" id="txtTitulo"><br>
-					<label>Hora Inicio</label>
-					<input type="text" name="hora" id="txtHora">	<br>  
-					<label>Descripcion</label>   			
-					<textarea id="txtDescripcion" rows="3"></textarea><br>
-					<label>Color</label>
-					<input type="color" value="#37c929" id="txtColor" name="">
+			    	<input type="hidden" name="agenda" id="id_agenda">
+			    	<input type="hidden" name="fecha" id="txtFecha">
+			    	<div class="form-row">
+				    	<div class="form-group col-md-12">
+				    		<label>Selecciona un paciente</label>
+				    		<?php $selectPacientes = $conexion->query($SQL);?>
+							<select name="paciente" id="pacientesS" data-placeholder="Seleciona un paciente..." class="chosen-select" required>
+								<option value=""></option>
+								<?php while ($fila = $selectPacientes->fetch_array()) {
+								echo "<option value='".$fila[1]."'>" . $fila[0] . "</option>";
+								} ?>
+							</select>
+				    	</div>
+				    </div>
+					<div class="form-row">
+						<div class="form-group col-md-8">
+							<label>Titulo:</label><input type="text" class="form-control" name="titulo" id="txtTitulo" placeholder="Titulo de la cita">
+						</div>
+						<div class="form-group col-md-4">
+							<label>Hora Inicio</label>
+							<div class="input-group clockpicker" data-autoclose="true">
+								<input type="text" name="hora" value="" class="form-control" id="txtHora" placeholder="Hora de la cita">
+							</div>
+								
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label>Descripcion</label><textarea id="txtDescripcion" class="form-control" rows="3" placeholder="Que vamos a hacer en la cita"></textarea>  	
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label>Color</label><input type="color" value="#37c929" class="form-control" id="txtColor" name="">
+						</div>
+					</div>
 				</div>		    	
 		      	<div class="modal-footer">
 			      	<button type="button" id="btnGuardar" class="btn btn-success">Guardar</button>
@@ -102,7 +121,12 @@
 			dayClick:function(date,jsEvent,view){
 				$("#txtTitulo").val("");
 				$("#txtDescripcion").val("");
-				$("#txtHora").val("");
+				var fecha = new Date();
+				var hora = fecha.getHours();
+ 				var minutos = fecha.getMinutes();
+				if(hora<10){hora='0'+hora}
+ 				if(minutos<10){minutos='0'+minutos}
+				$("#txtHora").val(hora+":"+minutos);
 				$('#tituloEvento').html("Agenda una Cita");
 				$("#txtColor").val("#37c929");
 				$("#EventoModal").modal();
@@ -279,6 +303,8 @@
 			}
 		});
 	};
+
+	$('.clockpicker').clockpicker();
 	</script>
 </body>
 </html>

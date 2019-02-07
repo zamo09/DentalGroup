@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-
+ 
 
 $accion = (isset($_GET['accion']))?$_GET['accion']:'leer';
 include ("conexion.php");
