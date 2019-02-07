@@ -5,6 +5,7 @@
 	<link rel="shortcut icon" href="../img/iconos/icon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/dental.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
 	<?php include ("barranavegacion.php"); ?>
@@ -32,6 +33,17 @@
 	  				</div>
 	  				<div class="col-md-2 text-left">
 	  					<a class="" href="selectpaciente.php?frm=diagnostico"><img width='100' height='100' src="../img/iconos/diente.png"></a>	
+	  				</div>
+	        	</div><br>
+	        	<div class="row justify-content-md-center">
+					<div class="col-md-2 text-right">
+						<a class="" href="agenda.php"><img width='100' height='100' src="../img/iconos/calendario.png"></a>					
+					</div>
+					<div class="col-md-2 text-center">
+	  					<a class="" href=""><img width='100' height='100' src="../img/iconos/caja-registradora.png"></a>	
+	  				</div>
+	  				<div class="col-md-2 text-left">
+	  					<a class="" href="selectpaciente.php?frm=contrato"><img width='100' height='100' src="../img/iconos/contrato.png"></a>	
 	  				</div>
 	        	</div>
 	        </div>

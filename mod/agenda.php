@@ -127,7 +127,7 @@
 				if(hora<10){hora='0'+hora}
  				if(minutos<10){minutos='0'+minutos}
 				$("#txtHora").val(hora+":"+minutos);
-				$('#tituloEvento').html("Agenda una Cita");
+				$('#tituloEvento').html("Agenda una Cita el dia " + date.format());
 				$("#txtColor").val("#37c929");
 				$("#EventoModal").modal();
 				$('#EventoModal').on('shown.bs.modal', function () {
