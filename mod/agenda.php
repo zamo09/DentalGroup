@@ -69,7 +69,7 @@
 				</div>		    	
 		      	<div class="modal-footer">
 			      	<button type="button" id="btnGuardar" class="btn btn-success">Guardar</button>
-			      	<button type="button" class="btn btn-primary">Modificar</button>
+			      	<button type="button" id="btnModificar" class="btn btn-primary">Modificar</button>
 			        <button type="button" id="btnEliminar" class="btn btn-danger" >Borrar</button>
 		      	</div>
 	      	</div>
@@ -173,8 +173,34 @@
 		
 	});
 
+		$('#btnModificar').click(function(){
+		swal({
+			  title: "Modificar la cita?",
+			  text: "Estas a punto de Modificar una cita esto es verdad?",
+			  icon: "warning",
+			  buttons: true,
+			  dangerMode: true,
+			})
+			.then((willDelete) => {
+			  if (willDelete) {
+			    RecolectarDatosGUI();
+				EnviarInformacion('modificar',NuevoEvento,"¡Cita Modificada!","Vuelve a planear tus tiempos la cita ya cambio");
+			  } else {
+			    swal({
+					icon: "info",
+					title: "Todo Tranquilo",
+					text: "No te preoucupes no Modificamos la cita",
+					button: "Entiendo",
+					timer: 3000,
+				});
+			  }
+			});
+		
+	});
+
 	function RecolectarDatosGUI(){
 		NuevoEvento = {
+			id_agenda: $("#id_agenda").val(),
 			id_paciente: $('#pacientesS').val(),
 			title: $('#txtTitulo').val(),
 			start: $('#txtFecha').val()+" "+$('#txtHora').val(),
