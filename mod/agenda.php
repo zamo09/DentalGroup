@@ -162,6 +162,7 @@
 						button: "Entiendo",
 						timer: 3000,
 					});
+					$('#CalendarioWeb').fullCalendar('refetchEvents');
 				  }
 				});
 			}
