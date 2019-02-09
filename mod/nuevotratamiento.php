@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nuevo Producto</title>
+	<title>Nuevo Tratamiento</title>
 	<link rel="shortcut icon" href="../img/iconos/icon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/formularios.css">
@@ -40,7 +40,7 @@
 					<div class="col-md-12 my-auto">	        	
 						<div class="card">
 							<div class="card-body">
-								<h3 class="text-center default-text py-3"><i class="fas fa-toolbox"></i> Nuevo Producto</h3>
+								<h3 class="text-center default-text py-3"><i class="fas fa-toolbox"></i> Nuevo Tratamiento</h3>
 								<!--Body-->
 								<form action="../php/guardarproducto.php" method="post"> 
 									<div class="row">
